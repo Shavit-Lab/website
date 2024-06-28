@@ -1,5 +1,5 @@
 # About
-Here we collaborate on the content that will be copied into CSAIL servers for our lab [website](https://shavitlab.csail.mit.edu/) (Note: the link to the left does NOT reflect the status of the files in this repo)
+Here we collaborate on the content that will be copied into CSAIL servers for our lab [website](https://shavitlab.csail.mit.edu/) (Note: the link to the left does NOT reflect the status of the files in this repo).
 
 # Contributing
 1. Clone this repo: `git clone https://github.com/Shavit-Lab/website.git && cd website`
