@@ -9,4 +9,4 @@ Here we collaborate on the content that will be copied into CSAIL servers for ou
 5. Stage the changes: `git add .`
 6. Commit the changes: `git commit -m "<change message>"`
 7. Push the changes: `git push`
-8. Open a PR on github
+8. Open a PR on github: Under Pull Requests Tab
