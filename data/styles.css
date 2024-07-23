@@ -2,7 +2,10 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* box-sizing: border-box; */
 }
 
 header {
@@ -22,6 +25,10 @@ nav ul li {
     margin-right: 10px;
 }
 
+ul li {
+    margin-bottom: 10px;
+}
+
 nav ul li a {
     color: white;
     text-decoration: none;
@@ -29,6 +36,9 @@ nav ul li a {
 
 main {
     padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    flex: 1;
 }
 
 footer {
@@ -36,7 +46,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    /* position: fixed; */
+    /* width: 100%; */
+    /* bottom: 0; */
 }
