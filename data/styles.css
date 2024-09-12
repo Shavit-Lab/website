@@ -151,3 +151,18 @@ footer {
     margin: 5px 0 0 0;
     color: #555; /* Gray text for the designation */
 }
+
+.alumni-photo {
+    width: 50px; /* Adjust the size of the image */
+    height: 50px;
+    border-radius: 50%; /* Make the image circular */
+    margin-right: 15px; /* Space between the image and the text */
+    object-fit: cover; /* Ensure the image covers the circular shape nicely */
+}
+
+.alumni-info a {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #007bff;
+}
