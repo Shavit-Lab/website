@@ -50,3 +50,119 @@ footer {
     /* width: 100%; */
     /* bottom: 0; */
 }
+
+
+
+/* Container for all cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* Card styling */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Member image styling */
+.card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Link icons styling */
+.card .links {
+    display: flex;
+    gap: 10px;
+}
+
+.card .links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+/* Specific row for Principal Investigator */
+.pi-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* Specific row for Postdocs */
+.postdoc-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* Specific row for Grad Students */
+.grad-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* Specific row for Undergrad Students */
+.undergrad-container {
+    display: flex;
+    justify-content: center;
+}
+
+.alumni-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.alumni-list li {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Bottom border for separation */
+}
+
+.alumni-list a {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.alumni-list a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.alumni-list p {
+    font-size: 14px;
+    margin: 5px 0 0 0;
+    color: #555; /* Gray text for the designation */
+}
+
+.alumni-photo {
+    width: 50px; /* Adjust the size of the image */
+    height: 50px;
+    border-radius: 50%; /* Make the image circular */
+    margin-right: 15px; /* Space between the image and the text */
+    object-fit: cover; /* Ensure the image covers the circular shape nicely */
+}
+
+.alumni-info a {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #007bff;
+}
