@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research - Shavit Lab</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+    <style>
+        img {
+            width: 500px;
+            height: auto;
+        }
+
+        .research-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .research-column {
+            flex: 0 1 48%; /* Set each column to take 48% of the width */
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .research-column {
+                flex: 0 1 100%; /* Make columns full-width on smaller screens */
+            }
+        }
+        body, p, h2, h3 {
+            text-align: justify;
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <h1>Research</h1>
@@ -16,15 +48,30 @@
                 <li><a href="research.html">Research</a></li>
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="links.html">Links</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <h2>Our Research Projects</h2>
-        <p>High Throughput Connectomics</p>
-        <p>Efficient Machine Learning</p>
+        <div class="research-container">
+            <div class="research-column">
+                <h3>High Throughput Connectomics</h3>
+                <p>Connectomics is a burgeoning field within neuroscience that attempts to better understand mechanisms of the brain through tracing the exact connections within it.
+                    While there are many scales in which connectomics can be employed, we specifically are interested in analyzing the exact synaptic connections between individual neurons.
+                    Doing so will allow for a better understanding of the mechanisms of medium scale neuron circuits.
+                    At our lab, we are collaborating with the <a href="https://lichtmanlab.fas.harvard.edu/">Lichtman Lab</a> at Harvard University to speed up the collection of connectomics datasets massively as part of the Smart-EM project.
+                    We are also analyzing the <a href="https://www.microns-explorer.org/">MICrONS</a> connectomics dataset to understand how the mouse visual system is organized.</p>
+            </div>
+            <div class="research-column">
+                <h3>Efficient Machine Learning</h3>
+                <p>As large language models continue to grow in capability, so too do they grow in size.
+                    Such a blowup has significant environmental and monetary cost, both for training and inference.
+                    We have discovered the existence of interesting neurons within LLMs that are multimodal and have an outsized sensitivity to pruning.
+                    Additionally, our lab closely collaborates with other researchers in the space, such as the <a href="https://ist.ac.at/en/research/alistarh-group/">Dan Alistarh Group</a> at IST Austria, to develop new ways to compress LLMs post-training for less computationally costly inference.
+                    We are also improving training performance through efficient neural network growth.</p>
+            </div>
+        </div>
     </main>
 
     <footer>
