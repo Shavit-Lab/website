@@ -38,9 +38,14 @@
     <main>
         <h2>Relevant Publications</h2>
         <p>* indicates equal contribution, &dagger; indicates co-correspondence</p>
+        <h3>2025</h3>
+        <ul>
+            <li><strong>Shashata Sawmya*, Linghao Kong*, Ilia Markov, Dan Alistarh, and Nir Shavit. </strong> <a href="https://arxiv.org/pdf/2405.15756">Wasserstein Distances, Neuronal Entanglement, and Sparsity.</a> <em>Proceedings of the 13th International Conference on Learning Representations - ICLR 2025</em>, Singapore, April 2025.</li>
+            <li><strong>Linghao Kong*, Heidi Durresi*, Lu Mi, and Nir Shavit. </strong> <a href="papers/Input-Synchrony-V1.pdf" target = "_blank">Presynaptic input synchrony at scale.</a> <em>Computational and Systems Neuroscience - Cosyne 2025</em> Poster Presentation, Montreal, Canada, March 2025.</li>
+        </ul>
         <h3>2024</h3>
         <ul>
-            <li><strong>Shashata Sawmya*, Linghao Kong*, Ilia Markov, Dan Alistarh, and Nir Shavit.  </strong> <a href="https://arxiv.org/pdf/2405.15756">Sparse Expansion and Neuronal Disentanglement.</a> arXiv:2405.15756, May 2024.</li>
+            <li><strong>Shashata Sawmya*, Linghao Kong*, Ilia Markov, Dan Alistarh, and Nir Shavit.  </strong> Neuronal Disentanglement and Sparse Expansion. <em>New England Mechanistic Interpretability Workshop Series - NEMI 2024</em> Poster Presentation, Boston, United States, August 2024.</li>
             <li><strong>Neehal Tumma*, Linghao Kong*&dagger;, Shashata Sawmya, Tony T. Wang, and Nir Shavit&dagger;. </strong> <a href="https://www.biorxiv.org/content/10.1101/2024.05.24.595837v1">A connectomics-driven analysis reveals novel characterization of border regions in mouse visual cortex.</a> bioRxiv:2024.05.24.595837, May 2024.</li>
         </ul>
         <h3>2023</h3>
@@ -126,7 +131,12 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Shavit Lab</p>
+        <p>&copy; 2024 - <span id="current-year"></span> Shavit Lab</p>
     </footer>
+    
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById("current-year").textContent = currentYear;
+    </script>
 </body>
 </html>
