@@ -312,8 +312,13 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Shavit Lab</p>
+        <p>&copy; 2024 - <span id="current-year"></span> Shavit Lab</p>
     </footer>
+    
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById("current-year").textContent = currentYear;
+    </script>
 </body>
 
 </html>
