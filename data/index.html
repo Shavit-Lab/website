@@ -18,6 +18,47 @@
         body, p, h2, h3 {
             text-align: justify;
         }
+        
+        /* Styles for collapsible year sections */
+        .year-header {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            margin: 5px 0;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .year-header:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .year-header::after {
+            content: '▼';
+            float: right;
+            transition: transform 0.3s;
+        }
+        
+        .year-header.collapsed::after {
+            content: '▶';
+        }
+        
+        .year-content {
+            max-height: 1000px;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+        
+        .year-content.collapsed {
+            max-height: 0;
+        }
+        
+        .year-content ul {
+            margin: 0;
+            padding-left: 20px;
+        }
     </style>
 </head>
 
@@ -39,19 +80,35 @@
         <h2>Aiming to Map the Structure of Thought</h2>
         <p>Our lab’s goal is to develop new mathematical models for neural computation in both tissue and silicon, with the goal of understanding the computation, its efficiencies, and its potential applications. Our modeling spans the gamut from connectomics based analysis of small animal circuits to the combinatorial interpretation of circuits in artificial neural networks. Our interdisciplinary approach strives to build on the interplay, and support the progression, of both neuroscience and machine learning research.</p>
         <h2>News</h2>
-        <ul>
-            <li><strong>January 22, 2025:</strong> Our work <a href="https://arxiv.org/pdf/2405.15756">Wasserstein Distances, Neuronal Entanglement, and Sparsity</a> has been accepted into <strong>ICLR 2025</strong> as a <strong>Spotlight Presentation</strong>!</li>
-            <li><strong>December 23, 2024:</strong> Our work <a href="papers/Input-Synchrony-V1.pdf" target = "_blank">Presynaptic input synchrony at scale</a> has been accepted into <strong>COSYNE 2025</strong>!</li>
-            <li><strong>December 3, 2024:</strong> Our work <a href="https://arxiv.org/abs/2412.02159">Jailbreak Defense in a Narrow Domain: Limitations of Existing Methods and a New Transcript-Classifier Approach</a> has been accepted into <strong>NeurIPS 2024 Workshop on New Frontiers in Adversarial Machine Learning</strong> and <strong>Workshop on Socially Responsible Language Modelling Research</strong>!</li>
-            <li><strong>October 16, 2024:</strong> Our work <a href="papers/73_Structure_Matters_Decipheri.pdf" target = "_blank">Structure Matters: Deciphering Neural Network's Properties from its Structure</a> has been accepted into <strong>NeurIPS 2024 Workshop on Symmetry and Geometry in Neural Representations</strong>!</li>
-            <li><strong>September 5, 2024:</strong> Introducing a new manuscript: <a href="https://arxiv.org/abs/2409.15318">On the Complexity of Neural Computation in Superposition</a>.</li>
-            <li><strong>May 29, 2024:</strong> Introducing two new manuscripts: <a href="https://www.biorxiv.org/content/10.1101/2024.05.24.595837v1">A connectomics-driven analysis reveals novel characterization of border regions in mouse visual cortex</a> and <a href="https://arxiv.org/pdf/2405.15756">Sparse Expansion and Neuronal Disentanglement</a>.</li>
-            <li><strong>May 28, 2024:</strong> We celebrated the end of the year with a delicious barbecue dinner!</li>
-            <div style="text-align: center;">
-                <img src="images/dinner_spr_2024.jpg" alt="Group Photo">
-            </div>
-          </ul>
         
+        <!-- 2025 News Section -->
+        <div class="year-header" onclick="toggleYear(this, '2025-content')">2025</div>
+        <div id="2025-content" class="year-content">
+            <ul>
+                <li><strong>June 18, 2025:</strong> Our work <a href="https://doi.org/10.1016/j.neunet.2025.107688">A connectomics-driven analysis reveals novel characterization of border regions in mouse visual cortex</a> has been published in the journal <strong>Neural Networks</strong>!</li>
+                <li><strong>June 9, 2025:</strong> Our work <a href="https://openreview.net/forum?id=D2KBtCqiPp">Input differentiation via negative computation</a> has been accepted into <strong>ICML 2025 Workshop on High-dimensional Learning Dynamics</strong>!</li>
+                <li><strong>May 26, 2025:</strong> Introducing a new manuscript: <a href="https://arxiv.org/abs/2505.19440">The Birth of Knowledge: Emergent Features across Time, Space, and Scale in Large Language Models</a>.</li>
+                <li><strong>April 30, 2025:</strong> Introducing two new manuscripts: <a href="https://arxiv.org/abs/2504.21598">Cascade Detector Analysis and Application to Biomedical Microscopy</a> and <a href="https://arxiv.org/abs/2504.08842">Towards combinatorial interpretability of neural computation</a>.</li>
+                <li><strong>March 8, 2025:</strong> Introducing a new manuscript: <a href="https://arxiv.org/abs/2503.06196">NeuroADDA: Active Discriminative Domain Adaptation in Connectomics</a>.</li>
+                <li><strong>January 22, 2025:</strong> Our work <a href="https://arxiv.org/abs/2405.15756">Wasserstein Distances, Neuronal Entanglement, and Sparsity</a> has been accepted into <strong>ICLR 2025</strong> as a <strong>Spotlight Presentation</strong>!</li>
+                <li><strong>December 23, 2024:</strong> Our work <a href="papers/Input-Synchrony-V1.pdf" target = "_blank">Presynaptic input synchrony at scale</a> has been accepted into <strong>COSYNE 2025</strong>!</li>
+            </ul>
+        </div>
+        
+        <!-- 2024 News Section -->
+        <div class="year-header collapsed" onclick="toggleYear(this, '2024-content')">2024</div>
+        <div id="2024-content" class="year-content collapsed">
+            <ul>
+                <li><strong>December 3, 2024:</strong> Our work <a href="https://arxiv.org/abs/2412.02159">Jailbreak Defense in a Narrow Domain: Limitations of Existing Methods and a New Transcript-Classifier Approach</a> has been accepted into <strong>NeurIPS 2024 Workshop on New Frontiers in Adversarial Machine Learning</strong> and <strong>Workshop on Socially Responsible Language Modelling Research</strong>!</li>
+                <li><strong>October 16, 2024:</strong> Our work <a href="papers/73_Structure_Matters_Decipheri.pdf" target = "_blank">Structure Matters: Deciphering Neural Network's Properties from its Structure</a> has been accepted into <strong>NeurIPS 2024 Workshop on Symmetry and Geometry in Neural Representations</strong>!</li>
+                <li><strong>September 5, 2024:</strong> Introducing a new manuscript: <a href="https://arxiv.org/abs/2409.15318">On the Complexity of Neural Computation in Superposition</a>.</li>
+                <li><strong>May 29, 2024:</strong> Introducing two new manuscripts: <a href="https://www.biorxiv.org/content/10.1101/2024.05.24.595837v1">A connectomics-driven analysis reveals novel characterization of border regions in mouse visual cortex</a> and <a href="https://arxiv.org/abs/2405.15756">Sparse Expansion and Neuronal Disentanglement</a>.</li>
+                <li><strong>May 28, 2024:</strong> We celebrated the end of the year with a delicious barbecue dinner!</li>
+                <div style="text-align: center;">
+                    <img src="images/dinner_spr_2024.jpg" alt="Group Photo">
+                </div>
+            </ul>
+        </div>
     </main>
 
     <footer>
@@ -61,6 +118,20 @@
     <script>
         const currentYear = new Date().getFullYear();
         document.getElementById("current-year").textContent = currentYear;
+        
+        // Function to toggle year sections
+        function toggleYear(header, contentId) {
+            const content = document.getElementById(contentId);
+            const isCollapsed = content.classList.contains('collapsed');
+            
+            if (isCollapsed) {
+                content.classList.remove('collapsed');
+                header.classList.remove('collapsed');
+            } else {
+                content.classList.add('collapsed');
+                header.classList.add('collapsed');
+            }
+        }
     </script>
 </body>
 
